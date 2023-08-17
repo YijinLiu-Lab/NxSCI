@@ -14,11 +14,11 @@
     <a href="#system-overview"><strong>System overview »</strong></a>
     <br />
     <br />
-    <a href="#Hardware-Implementation">Hardware implementation</a>
+    <a href="#hardware-implementation">Hardware implementation</a>
     ·
-    <a href="#Software-Development">Software development</a>
+    <a href="#software-development">Software development</a>
     ·
-    <a href="Battery-Example">Battery example</a>
+    <a href="#battery-example">Battery example</a>
   </p>
 </div>
 
@@ -89,7 +89,7 @@ Examples of the experimental acquired illumination patterns (fine controlled).
 
 <!-- ABOUT THE PROJECT -->
 ## Software Development
-This part includes [Illumination Pattern Evaluation](#Illumination-Pattern-Evaluation) and [Generative Image Reconstruction](#Generative-Image-Reconstruction) model. 
+This part includes [Illumination Pattern Evaluation](#illumination-pattern-evaluation) and [Generative Image Reconstruction](#generative-image-reconstruction) model. 
 
 ### Illumination Pattern Evaluation
 
