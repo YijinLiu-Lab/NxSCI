@@ -11,14 +11,14 @@
   <p align="center">
     Integrating the full-field transmission X-ray microscope with an X-ray fluorescence detector, eliminating nanoscale X-ray focusing and raster scanning for chemical element mapping.
     <br />
-    <a href="#about-the-project"><strong>System overview »</strong></a>
+    <a href="#system-overview"><strong>System overview »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">Hardware implementation</a>
+    <a href="#Hardware-Implementation">Hardware implementation</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Software development</a>
+    <a href="#Software-Development">Software development</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Battery example</a>
+    <a href="Battery-Example">Battery example</a>
   </p>
 </div>
 
@@ -42,7 +42,7 @@ This repository contains the source codes for the nanoscale X-ray structured-ill
 
 <p align = "center"><img src="images/Fig1.png" width="600" align="center">
 </p><br align = "left">
-Experimental setup and operation principle. (<b>a</b>) Two sandpaper diffusers are inserted into the X-ray beam to modulate the illumination structures. (<b>b</b>) The corresponding patterns are recorded by a full-field imaging detector downstream of the objective zone plate. (<b>c</b>) A Vortex XRF detector is used to collect the fluorescence signal on-the-fly. (<b>d</b>) The 1D fluorescence signal and 2D X-ray illumination patterns are fed into an image reconstruction model to obtain the chemical elemental maps in (<b>e</b>).
+<b>Experimental setup and operation principle.</b> (<b>a</b>) Two sandpaper diffusers are inserted into the X-ray beam to modulate the illumination structures. (<b>b</b>) The corresponding patterns are recorded by a full-field imaging detector downstream of the objective zone plate. (<b>c</b>) A Vortex XRF detector is used to collect the fluorescence signal on-the-fly. (<b>d</b>) The 1D fluorescence signal and 2D X-ray illumination patterns are fed into an image reconstruction model to obtain the chemical elemental maps in (<b>e</b>).
 </p>
 
 
@@ -53,7 +53,7 @@ Experimental setup and operation principle. (<b>a</b>) Two sandpaper diffusers a
 
 <p align = "center"><img src="images/FigS1.png" width="600" align="center">
 </p><p align = "left">
-The modified TXM experimental setup on <a href="https://www-ssrl.slac.stanford.edu/content/beam-lines/bl6-2c">beam line 6-2c</a> at <a href="https://www-ssrl.slac.stanford.edu">SSRL</a>. Two sandpaper stages with different grit sizes are inserted into the beam in the second hutch. An energy dispersive Vortex detector is placed perpendicular to the incident beam between condenser (CD) and zoneplate (ZP) to collect the fluorescence signal from the sample. The position of the Vortex detectors is controlled by a motor to collect the strongest XRF signal. 
+The modified TXM (<a href="https://www-ssrl.slac.stanford.edu/txm/node/1">Transmission X-ray microscopy</a>) experimental setup on <a href="https://www-ssrl.slac.stanford.edu/content/beam-lines/bl6-2c">beam line 6-2c</a> at <a href="https://www-ssrl.slac.stanford.edu">SSRL</a>. Two sandpaper stages with different grit sizes are inserted into the beam in the second hutch. An energy dispersive Vortex detector is placed perpendicular to the incident beam between condenser (CD) and zoneplate (ZP) to collect the fluorescence signal from the sample. The position of the Vortex detectors is controlled by a motor to collect the strongest XRF signal. 
 </p>
 
 More details about the synchrotron beamline configuration can be found in [F. Meirer et al. 2011](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3161818/).
@@ -89,7 +89,7 @@ Examples of the experimental acquired illumination patterns (fine controlled).
 
 <!-- ABOUT THE PROJECT -->
 ## Software Development
-This part includes [Illumination Pattern Evaluation](#Illumination-Pattern-Evaluation) and Generative Image Reconstruction model. 
+This part includes [Illumination Pattern Evaluation](#Illumination-Pattern-Evaluation) and [Generative Image Reconstruction](#Generative-Image-Reconstruction) model. 
 
 ### Illumination Pattern Evaluation
 
@@ -109,14 +109,14 @@ We further define the invertibility as an indicator to evaluate the impact of il
 Definition of the invertibility of the illumination pattern set.
 </p>
 
-The [Matlab](https://www.mathworks.com/products/matlab.html) codes to calculate the depedence and invertibility can be found in the [folder](Software).
+The [Matlab](https://www.mathworks.com/products/matlab.html) codes to calculate the invertibility can be found in the [folder](Software).
 
 
 ### Generative Image Reconstruction
 
 - We propose a __self-supervised generative approach__ to obtain the continuous representation of the elemental maps to solve this inverse problem. 
 
-- We leverage the __implicit neural representation__ to parameterize the spatial coordinates, effectively mapping the image. 
+- We leverage the __implicit neural representation__(e.g. [NeRF 2020](https://www.matthewtancik.com/nerf), [SIREN 2020](https://github.com/vsitzmann/siren),[WIRE 2023](https://github.com/vishwa91/wire/tree/main)) to parameterize the spatial coordinates, effectively mapping the image. 
 
 - Due to the ill-posedness of this problem, we leverage __prior knowledge from the TXM image__ in the NxSCI setting and incorporate it into our cost function as a regularization term. 
 
@@ -145,6 +145,6 @@ Reconstruction of elemental distribution in a lithium battery sample with mixed 
 
 ## Conclusion
 
-- We present a nanoscale chemical X-ray imaging technique that employs structured illumination to enable high-resolution, high-efficiency, spatially resolved mapping of elemental distributions within a sample. 
+- We present a __nanoscale chemical X-ray imaging technique__ that employs structured illumination to enable high-resolution, high-efficiency, spatially resolved mapping of elemental distributions within a sample. 
 
 - By jointly optimizing the illumination scheme and the image reconstruction model, the developed NxSCI approach overcomes the limitations of traditional time-consuming XRF point scanning probes. 
