@@ -25,6 +25,7 @@
 <!--
 [![DOI](DOIlink)](DOIlink)
 -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.5888945.svg)](https://doi.org/10.5281/zenodo.5888945)
 
 This repository contains the source codes for the nanoscale X-ray structured-illumination chemical imaging technique (NxSCI), as described in the following paper:
 
