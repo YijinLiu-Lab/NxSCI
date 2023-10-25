@@ -116,8 +116,7 @@ The [Matlab](https://www.mathworks.com/products/matlab.html) codes to calculate 
 
 - We propose a __self-supervised generative approach__ to obtain the continuous representation of the elemental maps to solve this inverse problem. 
 
-- We utilize the __implicit neural representation__(e.g. [NeRF 2020](https://www.matthewtancik.com/nerf), [SIREN 2020]
-  (https://github.com/vsitzmann/siren),[WIRE 2023](https://github.com/vishwa91/wire/tree/main)) to parameterize the spatial coordinates, effectively mapping the image. 
+- We utilize the __implicit neural representation__(e.g. [NeRF 2020](https://www.matthewtancik.com/nerf), [SIREN 2020](https://github.com/vsitzmann/siren),[WIRE 2023](https://github.com/vishwa91/wire/tree/main)) to parameterize the spatial coordinates, effectively mapping the image. 
 
 - Due to the ill-posedness of this problem, we leverage __prior knowledge from the TXM image__ in the NxSCI setting and incorporate it into our cost function as a regularization term. 
 
