@@ -33,7 +33,7 @@ This repository contains the source codes for the nanoscale X-ray structured-ill
   title={Nanoscale chemical imaging with structured X-ray illumination},
   author={Li, Jizhou and Chen, Si and Ratner, Daniel and Blu, Thierry and Pianetta, Piero and Liu, Yijin},
   year={2023},
-  journal={Submitted}
+  journal={Proceedings of the National Academy of Sciences (PNAS)}
 }
 ```
 
@@ -116,7 +116,8 @@ The [Matlab](https://www.mathworks.com/products/matlab.html) codes to calculate 
 
 - We propose a __self-supervised generative approach__ to obtain the continuous representation of the elemental maps to solve this inverse problem. 
 
-- We leverage the __implicit neural representation__(e.g. [NeRF 2020](https://www.matthewtancik.com/nerf), [SIREN 2020](https://github.com/vsitzmann/siren),[WIRE 2023](https://github.com/vishwa91/wire/tree/main)) to parameterize the spatial coordinates, effectively mapping the image. 
+- We utilize the __implicit neural representation__(e.g. [NeRF 2020](https://www.matthewtancik.com/nerf), [SIREN 2020]
+  (https://github.com/vsitzmann/siren),[WIRE 2023](https://github.com/vishwa91/wire/tree/main)) to parameterize the spatial coordinates, effectively mapping the image. 
 
 - Due to the ill-posedness of this problem, we leverage __prior knowledge from the TXM image__ in the NxSCI setting and incorporate it into our cost function as a regularization term. 
 
@@ -127,7 +128,7 @@ Schematic illustration of the proposed reconstruction model.
 </p>
 
 
-The [PyTorch](https://pytorch.org/) codes to reconstruct the chemical map can be found in the [folder](Software).
+The [PyTorch](https://pytorch.org/) codes to reconstruct the chemical map can be found in the [folder](Software/recon).
 
 
 <!-- ABOUT THE PROJECT -->
@@ -145,6 +146,17 @@ Reconstruction of elemental distribution in a lithium battery sample with mixed 
 
 ## Conclusion
 
-- We present a __nanoscale chemical X-ray imaging technique__ that employs structured illumination to enable high-resolution, high-efficiency, spatially resolved mapping of elemental distributions within a sample. 
+- We present a __nanoscale chemical X-ray imaging technique__ that employs structured illumination to enable high-resolution, spatially resolved mapping of elemental distributions within a sample. 
 
 - By jointly optimizing the illumination scheme and the image reconstruction model, the developed NxSCI approach overcomes the limitations of traditional time-consuming XRF point scanning probes. 
+
+## Acknowledgement
+
+- [TXM-Wizard / XMFlex](https://sourceforge.net/projects/txm-wizard/): Toolbox for handling X-ray transmission image 
+  data 
+  collected using the Xradia TXM system.
+- [PyMCA](https://www.silx.org/doc/PyMca/dev/index.html): Tools for interactive and/or batch processing analysis of 
+  X-Ray Fluorescence Spectra.
+- [PyXRF](https://nsls-ii.github.io/PyXRF/): Python-based sophisticated fluorescence analysis package for fitting 
+  and visualizing X-ray fluorescence data.
+- [SIREN](https://github.com/vsitzmann/siren): Implicit Neural Representations with Periodic Activation Functions.

@@ -34,7 +34,7 @@ def collectXRF(self, filename):
 def collectTXM(self, filename):
     filename = filename +'.xrm'
     Binning = 2 # can be changed
-    Exptime = 0.5
+    Exptime = 0.5 # can be changed
 
     microscope = xradia_helper.Microscope(motorwait = True, verbose = False, timer=False)
     if not microscope.StartGISingleAcquisition(str(os.path.join(self.filepath, filename)),
