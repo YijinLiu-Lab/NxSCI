@@ -1,3 +1,4 @@
+# Mixture of different models, see references for details
 import numpy as np
 import torch
 from torch import nn

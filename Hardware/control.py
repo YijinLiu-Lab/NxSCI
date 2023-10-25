@@ -1,6 +1,7 @@
 
 ########################
 ## Code snippets ONLY for the motor control and data collection
+# collection of XRF and TXM data
 ########################
 
 

@@ -1,4 +1,5 @@
 function invert = calInvertibility(H2, X)
+
 Xt = X(:);
 nx = size(X,1);
 ny = size(X,2);
